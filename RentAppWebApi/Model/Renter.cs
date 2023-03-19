@@ -4,10 +4,9 @@
     {
         public int Id { get; set; }
         public User User { get; set; }
+        public int UserId { get; set; }
+        public ReviewableObject ReviewableObject { get; set; }
+        public int ReviewableObjectId { get; set; }
         public ICollection<Contract> Contracts { get; set; }
-        public ICollection<RenterReview> LandLordReviews { get; set; }
-        public ICollection<LandLordReview> RenterReviews { get; set; }
-        public ICollection<RealEstateReview> RealEstateReviews { get; set; }
-
     }
 }
