@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using RentAppWebApi.Data;
 using RentAppWebApi.Init;
+using RentAppWebApi.Interface;
+using RentAppWebApi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddTransient<Seed>();
+
+builder.Services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
+builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<IContractRepository, ContractRepository>();
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+builder.Services.AddScoped<ILandLordRepository, LandLordRepository>();
+builder.Services.AddScoped<IPhotoOfRealEstateRepostitory, PhotoOfRealEstateRepository>();
+builder.Services.AddScoped<IRealEstateRepository, RealEstateRepository>();
+builder.Services.AddScoped<IRenterRepository, RenterRepository>();
+builder.Services.AddScoped<IReviewableObjectRepository, ReviawableObjectRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
