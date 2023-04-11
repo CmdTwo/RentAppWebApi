@@ -7,6 +7,5 @@ namespace RentAppWebApi.Interface
         IEnumerable<RealEstate> GetRealEstatesByCountry(int countryId);
         IEnumerable<RealEstate> GetRealEstatesByCity(int cityId);
         IEnumerable<RealEstate> GetRealEstatesByLandLord(int landLordId);
-        RealEstate GetRealEstateByReviewableObject(int reviewableObjectId);
     }
 }
