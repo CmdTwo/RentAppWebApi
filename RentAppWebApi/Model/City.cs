@@ -1,6 +1,8 @@
-﻿namespace RentAppWebApi.Model
+﻿using RentAppWebApi.Interface;
+
+namespace RentAppWebApi.Model
 {
-    public class City
+    public class City : IModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
