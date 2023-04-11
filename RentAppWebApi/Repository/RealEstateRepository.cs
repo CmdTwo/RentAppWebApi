@@ -11,10 +11,6 @@ namespace RentAppWebApi.Repository
         {
 
         }
-        public RealEstate GetRealEstateByReviewableObject(int reviewableObjectId)
-        {
-            return _table.FirstOrDefault(x => x.ReviewableObjectId == reviewableObjectId);
-        }
 
         public IEnumerable<RealEstate> GetRealEstatesByCity(int cityId)
         {

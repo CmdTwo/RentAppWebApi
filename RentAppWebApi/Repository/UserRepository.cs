@@ -14,7 +14,7 @@ namespace RentAppWebApi.Repository
 
         public User GetUserByLogin(string login)
         {
-            return _table.FirstOrDefault(x => x.Login == login);
+            return _table.FirstOrDefault(x => x.Login.Equals(login));
         }
     }
 }

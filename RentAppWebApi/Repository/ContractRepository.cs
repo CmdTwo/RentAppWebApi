@@ -10,21 +10,21 @@ namespace RentAppWebApi.Repository
             base(dataContext, dataContext.Contracts)
         {
 
-        }       
-
-        public IEnumerable<Contract> GetContractsByStatus(bool isActual)
-        {
-            return _table.Where(x => x.IsActual == isActual).ToList();
         }
 
-        public IEnumerable<Contract> GetContractsByLandLord(int landLordId)
+        public IEnumerable<Contract> GetContractsByLandLordId(int landLordId)
         {
             return _table.Where(x => x.LandLordId == landLordId).ToList();
         }
 
-        public IEnumerable<Contract> GetContractsByRenter(int renterId)
+        public IEnumerable<Contract> GetContractsByRenterId(int renterId)
         {
             return _table.Where(x => x.RenterId == renterId).ToList();
+        }
+
+        public IEnumerable<Contract> GetContractsByStatus(bool isActual)
+        {
+            return _table.Where(x => x.IsActual == isActual).ToList();
         }
     }
 }

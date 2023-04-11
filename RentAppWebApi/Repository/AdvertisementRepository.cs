@@ -19,7 +19,7 @@ namespace RentAppWebApi.Repository
 
         public IEnumerable<Advertisement> GetAdvertisementsByRealEstate(int realEstateId)
         {
-            return _table.Where(x => x.RealEsteteId == realEstateId).ToList();
+            return _table.Where(x => x.RealEstateId == realEstateId).ToList();
         }
     }
 }

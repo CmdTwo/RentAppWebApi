@@ -1,6 +1,8 @@
-﻿namespace RentAppWebApi.Model
+﻿using RentAppWebApi.Interface;
+
+namespace RentAppWebApi.Model
 {
-    public class PhotoOfRealEstate
+    public class PhotoOfRealEstate : IModel
     {
         public int Id { get; set; }
         public string ImagePath { get; set; }
